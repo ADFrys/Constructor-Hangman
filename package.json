@@ -1,7 +1,7 @@
 {
   "name": "constructor-hangman",
   "version": "1.0.0",
-  "description": "NPM packages for Constructor Hangman",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,14 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/ADFrys/Constructor-Hangman.git"
   },
-  "author": "Angela Frys",
+  "author": "Angela",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ADFrys/Constructor-Hangman/issues"
   },
   "homepage": "https://github.com/ADFrys/Constructor-Hangman#readme",
   "dependencies": {
-    "inquirer": "^5.1.0",
-    "require": "^2.4.20"
+    "inquirer": "^5.1.0"
   }
 }
