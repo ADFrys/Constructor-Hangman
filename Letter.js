@@ -1,33 +1,31 @@
+// Letter constructor
 
-var Letter = function(underliningLetter, letterGuessed) {
+var Letter = function(underliningLetter) {
+  // underliningletter is the string value storing the underlining character
   this.underliningLetter = underliningLetter;
-  this.letterGuessed = letterGuessed;
+
+  // letterGuessed is a boolean that stores if letter has been guessed or not (set to false by default)
+  this.letterGuessed = false;
+
+  // reveal is a function that returns underlying letter if guessed or "_" if false
   this.reveal = function() {
     if (this.letterGuessed === true) {
-      console.log(this.underliningLetter + " underliningletter");
+      console.log(this.underliningLetter);
 	  }
 	  else {
 	  console.log("_");
 	  }
   }
+  // checks the guess (character) against the underlining letter
   this.check = function(character) {
     if (character === this.underliningLetter) {
 	  this.letterGuessed = true;
-    console.log("true");
+    console.log("You guessed correct!");
     return;
 	  }
-      console.log("false");
-      console.log(character + " character");
-      console.log(this.underliningLetter);
+    console.log("That is incorrect. Guess again.");
   }
 };
 
-var newLetter = new Letter("a", true);
-
-var character = process.argv[2];
-
-
-newLetter.check(character);
-newLetter.reveal();
-
+// Export the letter constructor
 module.exports = Letter;
