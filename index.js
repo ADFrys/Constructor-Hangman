@@ -52,6 +52,6 @@ inquirer.prompt([
     // Adds to the word constructor. Stores character (guess).
     var newGuess = new Word(character);
   });
-  // Not sure how to the letter and word constructors interact to create the game logic
+  // Not sure how the letter and word constructors interact to create the game logic
 
  // call the reset function after word is guessed correctly
