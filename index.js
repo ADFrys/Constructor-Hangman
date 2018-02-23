@@ -47,15 +47,11 @@ inquirer.prompt([
   ])
   .then(function(answers) {
     // stores inquirer guess into a variable
-    var character = answers.character;
-    // Adds to the letter constructor. Stores character (guess).
-    var newGuess = new letter(character);
     console.log(answers);
+    var character = answers.character;
+    // Adds to the word constructor. Stores character (guess).
+    var newGuess = new Word(character);
   });
-
-  // Not sure how to use the letter and word constructors 
+  // Not sure how to the letter and word constructors interact to create the game logic
 
  // call the reset function after word is guessed correctly
-
- // export character variable to use as an argument in the Word constructor.
-  module.exports = character;
