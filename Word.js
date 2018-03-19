@@ -5,7 +5,7 @@ var Letter = require("./Letter.js");
 var character = require("./index.js");
 
 // Word constructor
-var Word = function() {
+var Word = function(words) {
   // Array of letter objects (contains letters of underlining word)
   this.lettersArray = [];
   // adds new letter objects to array
@@ -24,7 +24,25 @@ var Word = function() {
     Letter.prototype.toString = function(character) {
     this.check(character)
     }
-  }
+  };
+
+  this.word = "";
+
+  this.randomWord = function () {
+    this.word = words[Math.floor(Math.random() * words.length)];
+  
+    // var remainingLetters = word.length; 
+    var answerArray = []; // dashed
+  
+    // loops through word assigned to create appropriate number of underscores (_)
+    for (var i = 0; i < this.word.length; i++) {
+      answerArray[i] = "_";
+    };
+    // Shows the hidden word at the start of the game
+    console.log("Here is the word for you to guess " + answerArray);
+    
+    return answerArray; // ["_", "_", "_", "_"]
+  };
 };
 // export Word Constructor
 module.exports = Word;
